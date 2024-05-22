@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: karol-brejna-i/webpage-screenshot-action@v1
         with:
-          url: http://www.6d-vision.com/scene-labeling
+          url: http://ww7.6d-vision.com/scene-labeling?usid=19&utid=19069741812
           output: web.png
           
       - uses: karol-brejna-i/webpage-screenshot-action@v1
@@ -26,6 +26,10 @@ jobs:
           output: ip2.png
           mode: page
           
+      - run: mkdir web && cd web
+      - run: wget --wait=2 --level=inf --limit-rate=20K --recursive --page-requisites --user-agent=Mozilla --no-parent --convert-links --adjust-extension --no-clobber -e robots=off http://www.6d-vision.com/scene-labeling
+      - run: cd ..
+      
       - name: 'Tar files'
         run: tar -cvzf file.tar.gz *
   
