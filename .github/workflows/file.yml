@@ -11,13 +11,18 @@ jobs:
     steps:
       - uses: karol-brejna-i/webpage-screenshot-action@v1
         with:
-          url: https://www.google.com
-          output: google.png
+          url: https://www.facebook.com
+          output: web.png
           
       - uses: karol-brejna-i/webpage-screenshot-action@v1
         with:
           url: https://whatismyipaddress.com/
           output: ip.png
+          
+      - uses: karol-brejna-i/webpage-screenshot-action@v1
+        with:
+          url: https://ipinfo.io/what-is-my-ip
+          output: ip2.png
           
       - name: 'Tar files'
         run: tar -cvzf file.tar.gz *
