@@ -18,11 +18,13 @@ jobs:
         with:
           url: https://whatismyipaddress.com/
           output: ip.png
+          mode: page
           
       - uses: karol-brejna-i/webpage-screenshot-action@v1
         with:
           url: https://ipinfo.io/what-is-my-ip
           output: ip2.png
+          mode: page
           
       - name: 'Tar files'
         run: tar -cvzf file.tar.gz *
