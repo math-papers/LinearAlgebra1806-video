@@ -13,14 +13,17 @@ jobs:
         with:
           url: https://www.google.com
           output: google.png
+          
       - uses: karol-brejna-i/webpage-screenshot-action@v1
         with:
           url: https://whatismyipaddress.com/
           output: ip.png
+          
       - name: 'Tar files'
         run: tar -cvzf file.tar.gz *
+  
       - name: Upload Artifact
-      - uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: simple-screenshot
           path: file.tar.gz  #${{ github.workspace }}/*.png
