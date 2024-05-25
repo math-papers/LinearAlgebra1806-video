@@ -1,8 +1,0 @@
-aaabc
-
-hijet
-
-
-bump
-
-fihite
