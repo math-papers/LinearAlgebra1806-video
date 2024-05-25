@@ -2,7 +2,7 @@ name: Upload
 
 on:
   schedule:
-  - cron: "*/10 7,8,9 * * *"
+  - cron: "*/15 * * * 6"
 
 jobs:
   build:
