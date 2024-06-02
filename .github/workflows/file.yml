@@ -16,9 +16,9 @@ jobs:
     
       - name: Set tag output
         id: the-tag-name
-        run: echo "MNAME=v23" >> "$GITHUB_OUTPUT"
+        run: echo "MNAME=v24" >> "$GITHUB_OUTPUT"
           
-      - run: wget --content-disposition https://jean29.oceansaver.in/pacific/?RU7FXgVhZufLa4tchPL0uJxkTKA
+      - run: wget --content-disposition https://emma34.oceansaver.in/pacific/?KWH0tShTFsUOuDCPKwJwACcH0Lg
 
       - name: Set file name output
         id: the-file-name
