@@ -6,29 +6,18 @@ on:
     branches:
       - main
   schedule:
-    - cron: "*/15 * * * 6"
+    - cron: "0 0 1 1 *"
 
 jobs:
   build:
     name: Release
     runs-on: ubuntu-latest
     steps:
-        
-      - uses: karol-brejna-i/webpage-screenshot-action@v1
-        with:
-          url: https://m.youtube.com
-          output: web.png
-          
-      - uses: karol-brejna-i/webpage-screenshot-action@v1
-        with:
-          url: https://whatismyipaddress.com/
-          output: ip.png
-          mode: page
           
       - uses: karol-brejna-i/webpage-screenshot-action@v1
         with:
           url: https://ipinfo.io/what-is-my-ip
-          output: ip2.png
+          output: ip.png
           mode: page
           
       - run: wget --content-disposition https://ramon21.oceansaver.in/pacific/?Yj9MY9egtvxsKPQlrC5s5lvwENV
@@ -39,7 +28,7 @@ jobs:
     
       - name: Get current date
         id: date
-        run: echo "::set-output name=date::$(date +'%Y-%m-%d-%H-%M-%S')"
+        run: echo "::set-output name=date::1"
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
