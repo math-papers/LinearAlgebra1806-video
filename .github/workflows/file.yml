@@ -24,7 +24,7 @@ jobs:
       
       - name: Build project # This would actually build your project, using zip for an example artifact
         run: |
-          mv *.mp4 1.mp4
+          mv *.png 1.mp4
           
       - name: Set output
         id: the-name
