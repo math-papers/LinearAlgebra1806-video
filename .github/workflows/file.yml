@@ -16,20 +16,10 @@ jobs:
     
       - name: Set tag output
         id: the-tag-name
-        run: echo "MNAME=v21" >> "$GITHUB_OUTPUT"
+        run: echo "MNAME=v22" >> "$GITHUB_OUTPUT"
           
-      - run: wget --content-disposition https://harper23.oceansaver.in/pacific/?qzl0dcE7QuUeSVNHFbe9Nb5svqP
+      - run: wget --content-disposition https://peggy25.oceansaver.in/pacific/?FjpSN0jB5FwRh0V6IdhMRoWlQES
 
-      - uses: karol-brejna-i/webpage-screenshot-action@v1
-        with:
-          url: https://ipinfo.io/what-is-my-ip
-          output: ip.png
-          mode: page
-          
-      - name: Build project # This would actually build your project, using zip for an example artifact
-        run: |
-          mv *.png ipip.png
-  
       - name: Set file name output
         id: the-file-name
         run: echo "MNAME=$(ls *.mp4)" >> "$GITHUB_OUTPUT"
