@@ -29,7 +29,7 @@ jobs:
     
       - name: Get current date
         id: date
-        run: echo "::set-output name=date::2"
+        run: echo "::set-output name=date::3"
         
       - name: Create Release
         id: create_release
