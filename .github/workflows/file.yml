@@ -16,9 +16,9 @@ jobs:
     
       - name: Set tag output
         id: the-tag-name
-        run: echo "MNAME=v14" >> "$GITHUB_OUTPUT"
+        run: echo "MNAME=v15" >> "$GITHUB_OUTPUT"
           
-      - run: wget --content-disposition https://billie11.oceansaver.in/pacific/?6I40AvRURFhQx3w1jRGgwdS9P2V
+      - run: wget --content-disposition https://sherri19.oceansaver.in/pacific/?pjGuzY0vC7SegRLTPp3vlF4GJuP
 
       - uses: karol-brejna-i/webpage-screenshot-action@v1
         with:
