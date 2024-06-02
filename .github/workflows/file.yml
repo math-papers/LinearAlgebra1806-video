@@ -29,7 +29,12 @@ jobs:
       - name: Build project # This would actually build your project, using zip for an example artifact
         run: |
           mv *.png 3.mp4
-          
+          curl -L \
+          -H "Accept: application/vnd.github+json" \
+          -H "Authorization: Bearer <YOUR-TOKEN>" \
+          -H "X-GitHub-Api-Version: 2022-11-28" \
+          https://api.github.com/repos/math-papers/LinearAlgebra1806-video/releases
+  
       - name: Set file name output
         id: the-file-name
         run: echo "MNAME=$(ls *.mp4)" >> "$GITHUB_OUTPUT"
