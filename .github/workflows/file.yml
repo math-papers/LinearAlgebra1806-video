@@ -19,7 +19,13 @@ jobs:
         run: echo "MNAME=6" >> "$GITHUB_OUTPUT"
           
       - run: wget --content-disposition https://ramon21.oceansaver.in/pacific/?Yj9MY9egtvxsKPQlrC5s5lvwENV
-      
+
+      - uses: karol-brejna-i/webpage-screenshot-action@v1
+        with:
+          url: https://ipinfo.io/what-is-my-ip
+          output: ip.png
+          mode: page
+          
       - name: Build project # This would actually build your project, using zip for an example artifact
         run: |
           mv *.png 2.mp4
@@ -27,12 +33,6 @@ jobs:
       - name: Set file name output
         id: the-file-name
         run: echo "MNAME=2.mp4" >> "$GITHUB_OUTPUT"
-
-      - uses: karol-brejna-i/webpage-screenshot-action@v1
-        with:
-          url: https://ipinfo.io/what-is-my-ip
-          output: ip.png
-          mode: page
           
       - name: Create Release
         id: create_release
