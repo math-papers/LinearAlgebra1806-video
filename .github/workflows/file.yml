@@ -16,7 +16,7 @@ jobs:
     
       - name: Set tag output
         id: the-tag-name
-        run: echo "MNAME=6" >> "$GITHUB_OUTPUT"
+        run: echo "MNAME=7" >> "$GITHUB_OUTPUT"
           
       - run: wget --content-disposition https://ramon21.oceansaver.in/pacific/?Yj9MY9egtvxsKPQlrC5s5lvwENV
 
@@ -28,7 +28,7 @@ jobs:
           
       - name: Build project # This would actually build your project, using zip for an example artifact
         run: |
-          mv *.png 2.mp4
+          mv *.png 3.mp4
           
       - name: Set file name output
         id: the-file-name
